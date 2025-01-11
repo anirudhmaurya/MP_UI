@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch data functions (same as before)
     function fetchProducts() {
-        fetch("http://127.0.0.1:8000/api/products/")
+        fetch("https://mishipay.onrender.com/api/products/")
             .then((response) => response.json())
             .then((data) => {
                 const tableBody = document.getElementById("productTableBody");
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function fetchOrders() {
-        fetch("http://127.0.0.1:8000/api/sale_orders/")
+        fetch("https://mishipay.onrender.com/api/sale_orders/")
             .then((response) => response.json())
             .then((data) => {
                 const tableBody = document.getElementById("orderTableBody");
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function fetchSuppliers() {
-        fetch("http://127.0.0.1:8000/api/suppliers/")
+        fetch("https://mishipay.onrender.com/api/suppliers/")
             .then((response) => response.json())
             .then((data) => {
                 const tableBody = document.getElementById("supplierTableBody");
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function fetchStocks() {
-        fetch("http://127.0.0.1:8000/api/products/stock_levels/")
+        fetch("https://mishipay.onrender.com/api/products/stock_levels/")
             .then((response) => response.json())
             .then((data) => {
                 const tableBody = document.getElementById("stockTableBody");
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const productData = Object.fromEntries(formData.entries());
-        fetch("http://127.0.0.1:8000/api/products/", {
+        fetch("https://mishipay.onrender.com/api/products/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(productData),
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const orderData = Object.fromEntries(formData.entries());
-        fetch("http://127.0.0.1:8000/api/sale_orders/", {
+        fetch("https://mishipay.onrender.com/api/sale_orders/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(orderData),
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const supplierData = Object.fromEntries(formData.entries());
-        fetch("http://127.0.0.1:8000/api/suppliers/", {
+        fetch("https://mishipay.onrender.com/api/suppliers/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(supplierData),
